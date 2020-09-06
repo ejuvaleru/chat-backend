@@ -31,7 +31,7 @@ const crearUsuario = async (req, res = response) => {
         res.json({
             ok: true,
             msg: 'Usuario creado correctamente.',
-            usuario,
+            usuario: usuario,
             token
         });
     } catch (error) {
@@ -72,7 +72,7 @@ const iniciarSesion = async (req, res = response) => {
         res.json({
             ok: true,
             msg: 'Inicio de sesion exitoso.',
-            usuarioDb,
+            usuario: usuarioDb,
             token
         });
 
@@ -96,7 +96,7 @@ const renewToken = async (req, res = response) => {
         res.json({
             ok: true,
             msg: 'Token renovado correctamente.',
-            usuarioDb,
+            usuario: usuarioDb,
             token
         });
         
